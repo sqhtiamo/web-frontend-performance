@@ -14,3 +14,22 @@ Jakob Nielsen：<br>
 手动代码检测：打log <br>
 自动代码检测：工具 <br>
 firebug包含的js代码性能分析器
+
+## 2.3 线程处理
+多线程将不会很快在JS上实现。
+
+## 2.4 确保响应所读
+Google浏览器插件Gears实现WorkerPool API。允许浏览器主JS线程创建后台“Worker”，接收浏览器线程的一些简单信息。<br>
+### 2.4.1 Web Workers
+<b>主线程：</b><br>
+`var w = new Worker("worker.js");
+w.postmessage(m);
+w.onMessage = function(e) {
+	...
+}
+w.terminate()`
+<b>Worker:</b><br>
+`onmessage = function(e) {
+	postMessage()
+}`
+### 2.4.1 Gears
