@@ -21,7 +21,7 @@ firebug包含的js代码性能分析器
 ## 2.4 确保响应所读
 Google浏览器插件Gears实现WorkerPool API。允许浏览器主JS线程创建后台“Worker”，接收浏览器线程的一些简单信息。<br>
 ### 2.4.1 Web Workers
-<b>主线程：</b><br>
+<b>主线程：</b>
 	
 	var w = new Worker("worker.js");
 	w.postmessage(m);
@@ -30,8 +30,7 @@ Google浏览器插件Gears实现WorkerPool API。允许浏览器主JS线程创�
 	}
 	w.terminate()
 
-<br>
-<b>Worker:</b><br>
+<b>Worker:</b>
 
 	onmessage = function(e) {
 	    postMessage()
