@@ -22,14 +22,15 @@ firebug包含的js代码性能分析器
 Google浏览器插件Gears实现WorkerPool API。允许浏览器主JS线程创建后台“Worker”，接收浏览器线程的一些简单信息。<br>
 ### 2.4.1 Web Workers
 <b>主线程：</b><br>
-    var w = new Worker("worker.js");
-    w.postmessage(m);
-    w.onMessage = function(e) {
-    	...
-    }
-    w.terminate()` <br>
+	var w = new Worker("worker.js");
+	w.postmessage(m);
+	w.onMessage = function(e) {
+		...
+	}
+	w.terminate()
+    <br>
 <b>Worker:</b><br>
-    onmessage = function(e) {
+	onmessage = function(e) {
 	    postMessage()
-    }
+	}
 ### 2.4.1 Gears
