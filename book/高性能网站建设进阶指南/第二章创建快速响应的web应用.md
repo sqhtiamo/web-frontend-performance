@@ -56,3 +56,16 @@ Gears API 与Web Worker API有微小差别。
 ### 2.4.6 内存问题的疑难解答
 当前没有好的JS内存排查工具，大多技术停留在观察浏览器进程中内存痕迹的水平。<br>
 发现内存问题的解决方案：
+
+1. 使用delete删除不需要的JS对象。
+2. 从DOM中移除不需要的节点。
+
+	var page = {test: "test"};
+	...
+	delete page;
+
+	var Node = $('#redundant');
+	delete Node.parent.removeChild(Node);
+
+[Mozilla lab](http://labs.mozilla.com)
+      
